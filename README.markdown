@@ -8,3 +8,4 @@
 * [React Styleguidist Preact](https://react-styleguidist.js.org/docs/cookbook#how-to-use-react-styleguidist-with-preact)
 * [React Styleguidist Boilerplate](https://github.com/SaraVieira/react-styleguidist-boilerplate)
 * [Storybook Boilerplate](https://github.com/SaraVieira/storybook-boilerplate)
+* [Storybook Addons](https://storybook.js.org/addons/addon-gallery/)

@@ -15,7 +15,8 @@ import {
   Slide,
   Text,
   Appear,
-  CodePane
+  CodePane,
+  Link
 } from "spectacle";
 
 // Import image preloader util
@@ -62,11 +63,7 @@ const theme = createTheme(
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck
-        transition={["zoom", "slide"]}
-        transitionDuration={200}
-        theme={theme}
-      >
+      <Deck transition={["fade"]} transitionDuration={200} theme={theme}>
         <Slide transition={["zoom"]} bgColor="secondary">
           <Heading size={1} caps lineHeight={1} textColor="primary">
             Story Time
@@ -101,7 +98,7 @@ ul {
             />
           </Appear>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="secondary">
+        <Slide transition={["fade"]} bgColor="secondary">
           <Image
             width="100%"
             height="100%"
@@ -387,6 +384,24 @@ body .button {
           ]}
         />
         <Slide transition={["fade"]} bgColor="secondary">
+          <List>
+            <ListItem textColor="primary">Can be used with preact 🙌</ListItem>
+            <Appear>
+              <ListItem textColor="primary">
+                Design is completely customizable
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary">Live editor</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary">
+                Component Definition in Markdown
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">
           <Heading size={3} textColor="primary" caps>
             Storybook
           </Heading>
@@ -474,6 +489,65 @@ body .button {
             { loc: [6, 7], title: "Set configuration" }
           ]}
         />
+        <Slide transition={["fade"]} bgColor="secondary">
+          <List>
+            <ListItem textColor="primary">Can be used with vue 🙌</ListItem>
+            <Appear>
+              <ListItem textColor="primary">A lot of addons</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary">Integrated Console</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary">
+                Component Definition in Plain JSX
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">
+          <Heading size={2} textColor="primary" caps>
+            Why ?
+          </Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">
+          <List>
+            <ListItem textColor="primary">More maintainable styles</ListItem>
+            <Appear>
+              <ListItem textColor="primary">Less specific bugs</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary">Better for unit testing</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary">One source of truth!</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary">
+                UI Development is generally better!
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">
+          <Heading size={2} textColor="primary" caps>
+            Thank you
+          </Heading>
+          <div>
+          <Link
+            textColor="primary"
+            href="https://github.com/SaraVieira/styleguide-driven-development"
+          >
+            github.com/SaraVieira/styleguide-driven-development
+          </Link>
+          </div>
+          <Link
+            textColor="primary"
+            href="https://styleguide-driven-development.now.sh/"
+          >
+            styleguide-driven-development.now.sh
+          </Link>
+        </Slide>
       </Deck>
     );
   }
