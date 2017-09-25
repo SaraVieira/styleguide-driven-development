@@ -161,25 +161,37 @@ body .button {
                 <ListItem textColor="primary">Sara Vieira</ListItem>
                 <ListItem textColor="primary">Full Stack Developer</ListItem>
                 <ListItem textColor="primary">@NikkitaFTW</ListItem>
-                <ListItem textColor="primary" style={{ display: "flex" }}>
+                <ListItem
+                  textColor="primary"
+                  style={{ display: "flex", marginTop: 20 }}
+                >
                   <Image
                     src={images.soccer}
                     style={{
                       width: 50,
-                      height: 50
+                      height: 50,
+                      margin: 0
                     }}
                   />
-                  <Text textColor="primary">Football </Text>
+                  <Text textColor="primary" style={{ margin: 0 }}>
+                    Football{" "}
+                  </Text>
                 </ListItem>
-                <ListItem textColor="primary" style={{ display: "flex" }}>
+                <ListItem
+                  textColor="primary"
+                  style={{ display: "flex", marginTop: 20 }}
+                >
                   <Image
                     src={images.zombie}
                     style={{
                       width: 50,
-                      height: 50
+                      height: 50,
+                      margin: 0
                     }}
                   />
-                  <Text textColor="primary">Horror Movies</Text>
+                  <Text textColor="primary" style={{ margin: 0 }}>
+                    Horror Movies
+                  </Text>
                 </ListItem>
                 <ListItem textColor="primary" style={{ display: "flex" }}>
                   <Image src="https://i.imgur.com/7zkiG.gif" />
@@ -290,7 +302,7 @@ body .button {
             <Fit style={{ marginTop: 40, marginRight: 40 }}>
               <Image
                 width="350"
-                src="https://github.com/styleguidist/brand/blob/master/rs-logo-with-type.png?raw=true"
+                src="https://raw.githubusercontent.com/styleguidist/brand/master/rs-logo-with-type.png"
               />
             </Fit>
             <Fit
@@ -335,6 +347,13 @@ body .button {
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary">
           <div style={{ overflow: "scroll", height: "100vh" }}>
+            <Link
+              textColor="primary"
+              href="https://react-styleguidist-boilerplate.now.sh/"
+              target="_blank"
+            >
+              Boilerplate
+            </Link>
             <Image src={images.styleguidistStart} width="100%" />
           </div>
         </Slide>
@@ -352,7 +371,7 @@ body .button {
 │   │     └────── Readme.md
 ├── styleguide (build)
 ├── package.json
-├── .styleguide.config.js
+├── styleguide.config.js
 ├── .babelrc
 ├── .eslintrc
 └── .gitignore
@@ -362,13 +381,29 @@ body .button {
         <CodeSlide
           transition={["fade"]}
           lang="jsx"
+          code={require("raw-loader!../assets/styleguide-config.example")}
+          ranges={[
+            { loc: [0, 270], title: "styleguide.config.js" },
+            { loc: [1, 2], title: "Locate Your Components" },
+            { loc: [2, 3], title: "Use default Example" },
+            { loc: [3, 4], title: "Give it a title" },
+            { loc: [4, 7], title: "Update Webpack config" },
+            { loc: [7, 12], title: "Load JS/JSX" },
+            { loc: [12, 16], title: "Load CSS" }
+          ]}
+        />
+        <CodeSlide
+          transition={["fade"]}
+          lang="jsx"
           code={require("raw-loader!../assets/code.example")}
           ranges={[
             { loc: [0, 270], title: "Button.js" },
             { loc: [0, 5], title: "Import all the things" },
-            { loc: [6, 20], title: "Define your component" },
-            { loc: [24, 33], title: "Define your propTypes" },
-            { loc: [34, 42], title: "Define your defaultProps" }
+            { loc: [8, 13], title: "Define your component" },
+            { loc: [13, 23], title: "Define your component" },
+            { loc: [24, 31], title: "Define your propTypes" },
+            { loc: [31, 37], title: "Define your propTypes" },
+            { loc: [37, 44], title: "Define your defaultProps" }
           ]}
         />
         <CodeSlide
@@ -377,18 +412,42 @@ body .button {
           code={require("raw-loader!../assets/markdown.example")}
           ranges={[
             { loc: [0, 270], title: "Readme.md" },
-            { loc: [0, 4], title: "Render default Button" },
-            { loc: [6, 11], title: "Render with props" },
+            { loc: [2, 5], title: "Render default Button" },
+            { loc: [8, 11], title: "Render with props" },
             { loc: [13, 17], title: "Disable Editor" },
             { loc: [19, 23], title: "Render Static" }
           ]}
         />
         <Slide transition={["fade"]} bgColor="secondary">
           <List>
-            <ListItem textColor="primary">Can be used with preact 🙌</ListItem>
+            <ListItem textColor="primary">
+              Can be used with{" "}
+              <Link
+                href="https://react-styleguidist.js.org/docs/cookbook.html#how-to-use-react-styleguidist-with-preact"
+                textColor="primary"
+                target="_blank"
+              >
+                Preact 🙌
+              </Link>
+            </ListItem>
             <Appear>
               <ListItem textColor="primary">
-                Design is completely customizable
+                Design is completely customizable, you can change the {" "}
+                <Link
+                  textColor="primary"
+                  href="https://react-styleguidist.js.org/docs/cookbook.html#how-to-change-styles-of-a-style-guide"
+                  target="_blank"
+                >
+                  styles
+                </Link>{" "}
+                and even the actual{" "}
+                <Link
+                  textColor="primary"
+                  href="https://react-styleguidist.js.org/docs/cookbook.html#how-to-change-the-layout-of-a-style-guide"
+                  target="_blank"
+                >
+                  layout.
+                </Link>
               </ListItem>
             </Appear>
             <Appear>
@@ -425,6 +484,13 @@ body .button {
           />
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary">
+          <Link
+            textColor="primary"
+            href="https://storybook-boilerplate.now.sh/"
+            target="_blank"
+          >
+            Boilerplate
+          </Link>
           <div style={{ overflow: "scroll", height: "100vh" }}>
             <Image src={images.storybookStart} width="100%" />
           </div>
@@ -442,7 +508,6 @@ body .button {
 │   │     └────── index.js
 │   │     └────── Button.js
 │   │     └────── Button.css
-│   │     └────── Readme.md
 │   ├── stories
 │   └─────  button.js
 ├── .out (build)
@@ -460,9 +525,11 @@ body .button {
           ranges={[
             { loc: [0, 270], title: "Button.js" },
             { loc: [0, 5], title: "Import all the things" },
-            { loc: [6, 20], title: "Define your component" },
-            { loc: [24, 33], title: "Define your propTypes" },
-            { loc: [34, 42], title: "Define your defaultProps" }
+            { loc: [8, 13], title: "Define your component" },
+            { loc: [13, 23], title: "Define your component" },
+            { loc: [24, 31], title: "Define your propTypes" },
+            { loc: [31, 37], title: "Define your propTypes" },
+            { loc: [37, 44], title: "Define your defaultProps" }
           ]}
         />
         <CodeSlide
@@ -491,9 +558,28 @@ body .button {
         />
         <Slide transition={["fade"]} bgColor="secondary">
           <List>
-            <ListItem textColor="primary">Can be used with vue 🙌</ListItem>
+            <ListItem textColor="primary">
+              Can be used with{" "}
+              <Link
+                textColor="primary"
+                href="https://storybook.js.org/basics/guide-vue/"
+                target="_blank"
+              >
+                Vue
+              </Link>{" "}
+              🙌
+            </ListItem>
             <Appear>
-              <ListItem textColor="primary">A lot of addons</ListItem>
+              <ListItem textColor="primary">
+                A lot of {" "}
+                <Link
+                  textColor="primary"
+                  href="https://storybook.js.org/addons/addon-gallery/"
+                  target="_blank"
+                >
+                  Addons
+                </Link>
+              </ListItem>
             </Appear>
             <Appear>
               <ListItem textColor="primary">Integrated Console</ListItem>
@@ -517,10 +603,10 @@ body .button {
               <ListItem textColor="primary">Less specific bugs</ListItem>
             </Appear>
             <Appear>
-              <ListItem textColor="primary">Better for unit testing</ListItem>
+              <ListItem textColor="primary">One source of truth!</ListItem>
             </Appear>
             <Appear>
-              <ListItem textColor="primary">One source of truth!</ListItem>
+              <ListItem textColor="primary">Better for unit testing</ListItem>
             </Appear>
             <Appear>
               <ListItem textColor="primary">
@@ -534,12 +620,12 @@ body .button {
             Thank you
           </Heading>
           <div>
-          <Link
-            textColor="primary"
-            href="https://github.com/SaraVieira/styleguide-driven-development"
-          >
-            github.com/SaraVieira/styleguide-driven-development
-          </Link>
+            <Link
+              textColor="primary"
+              href="https://github.com/SaraVieira/styleguide-driven-development"
+            >
+              github.com/SaraVieira/styleguide-driven-development
+            </Link>
           </div>
           <Link
             textColor="primary"

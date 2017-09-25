@@ -13,7 +13,10 @@ const Button = ({ color, size, onClick, children }) => {
   };
 
   return (
-    <button className="button" style={styles} onClick={onClick}>
+    <button 
+      className="button"
+      style={styles} 
+      onClick={onClick}>
       {children}
     </button>
   );
@@ -31,15 +34,15 @@ Button.propTypes = {
   /** Gets called when the user clicks on the button */
   onClick: PropTypes.func
 };
+
 Button.defaultProps = {
   color: "#333",
   size: "normal",
-  /* eslint-disable no-console */
   onClick: event => {
     console.log("You have clicked me!", event.target);
   }
-  /* eslint-enable no-console */
 };
+
 Button.sizes = {
   small: "10px",
   normal: "14px",
