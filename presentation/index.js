@@ -64,7 +64,11 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["fade"]} transitionDuration={200} theme={theme}>
-        <Slide transition={["zoom"]} bgColor="secondary">
+        <Slide
+          transition={["zoom"]}
+          bgColor="secondary"
+          notes="  I used to work on this project that had a lot of legacy css or in this case less and you may think that being less made it better but oh no it didn't."
+        >
           <Heading size={1} caps lineHeight={1} textColor="primary">
             Story Time
           </Heading>
@@ -74,7 +78,11 @@ export default class Presentation extends React.Component {
             </Heading>
           </Appear>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
+        <Slide
+          notes="It mainly just did this what was a not a whole of a lot better"
+          transition={["fade"]}
+          bgColor="secondary"
+        >
           <CodePane
             language="css"
             source={`
@@ -98,19 +106,31 @@ ul {
             />
           </Appear>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
+        <Slide
+          notes="To get the context here is how specificity works in css:"
+          transition={["fade"]}
+          bgColor="secondary"
+        >
           <Image
             width="100%"
             height="100%"
             src="https://designshack.net/wp-content/uploads/css-specificity-10.jpg"
           />
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
+        <Slide
+          notes="Of course important overrides all of the above"
+          transition={["fade"]}
+          bgColor="secondary"
+        >
           <Heading size={2} textColor="primary" caps>
             !important overrides all of this
           </Heading>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
+        <Slide
+          notes="so how do you override this:"
+          transition={["fade"]}
+          bgColor="secondary"
+        >
           <Heading size={3} textColor="primary" caps>
             How do you override this ?
           </Heading>
@@ -126,13 +146,18 @@ ul {
           />
         </Slide>
         <Slide
+          notes="I mean how do you override this without inline styles because everytime you use them little kitten dies and look at them: We have feelings we don't want to do that."
           transition={["fade"]}
           bgImage={images.kitten}
           align="center flex-end"
         >
           <Text>Photo by Q'AILA on Unsplash</Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
+        <Slide
+          notes="Basically, you have to go back to the beginning and override it with classes or tags and add !important and do a 360 round on the specificity wheel."
+          transition={["fade"]}
+          bgColor="secondary"
+        >
           <CodePane
             language="css"
             source={`
@@ -144,10 +169,18 @@ body .button {
               `}
           />
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
+        <Slide
+          notes="This pain I felt every time I placed an important in my code I wanted everyone to feel so this is also the story of this:"
+          transition={["fade"]}
+          bgColor="secondary"
+        >
           <Image src={images.caralho} width="100%" height="100%" />
         </Slide>
-        <Slide transition={["fade"]} bgColor="yld">
+        <Slide
+          notes="So, my name is Sara and I am FE developer for YLD, a react and node consultancy that works out of london and lisbon.I'm always on twitter and you should follow me there if you like this sort of weird humor and rants."
+          transition={["fade"]}
+          bgColor="yld"
+        >
           <Layout style={{ minWidth: 500 }}>
             <Fit>
               <List
@@ -203,7 +236,11 @@ body .button {
             </Fit>
           </Layout>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
+        <Slide
+          notes="I'm from portugal , you may remeber us as the guys that won the euro and don't really know how:"
+          transition={["fade"]}
+          bgColor="secondary"
+        >
           <Heading size={1} textColor="primary" caps>
             Portugal
           </Heading>
@@ -240,7 +277,7 @@ body .button {
             A change in perspective
           </Heading>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
+        <Slide notes="Would you code this ? Your first idea may be to just start hacking away and make this page in one go and make it look awesome" transition={["fade"]} bgColor="secondary">
           <div style={{ overflow: "scroll", height: "100vh" }}>
             <Image
               src="https://cdn.dribbble.com/users/1018923/screenshots/3545743/attachments/787979/landingpage_highfid.png"
@@ -248,10 +285,10 @@ body .button {
             />
           </div>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
+        <Slide notes="Just start hacking aways in your webopacks and jsxs and all the cool kid stuff.this will create inconsenticies and will also force you to make a lot of custom css and.." transition={["fade"]} bgColor="secondary">
           <Image src="https://media0.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif" />
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
+        <Slide notes="custom css causes specific bugs and a general lack of inconsistency in the code you build. Who has ever worked with opera mini ? You know my pain then" transition={["fade"]} bgColor="secondary">
           <Heading size={1} textColor="primary" caps>
             Custom CSS is the death of a developer
           </Heading>
@@ -261,7 +298,10 @@ body .button {
             </Heading>
           </Appear>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
+        <Slide notes="As you can see I basically divided this page into little chunks that are composable into an awesome UI.
+The idea of having a styleguide or a UI Toolkit is to define everything in one place so that you have to write the least amount of CSS and avoid stuff like I said at the top
+
+As you can see I am not here to teach you a craft or a skill, I'm here to trying and get a shift in thinking and basically start thinking a little like designers do and create a living styleguide. We should all have our very own bootstrap, that's my idea" transition={["fade"]} bgColor="secondary">
           <div style={{ overflow: "scroll", height: "100vh" }}>
             <Image src={images.styleguide} width="100%" />
           </div>
