@@ -40,7 +40,10 @@ const images = {
   styleguidist: require("../assets/styleguidist.png"),
   styleguidistStart: require("../assets/styleguidist-start.png"),
   storybook: require("../assets/storybook.png"),
-  storybookStart: require("../assets/storybook-start.png")
+  storybookStart: require("../assets/storybook-start.png"),
+  firstSlide: require("../assets/first-slide.jpeg"),
+  secondSlide: require("../assets/second-slide.jpeg"),
+  figma: require("../assets/figma.png")
 };
 
 preloader(images);
@@ -65,7 +68,17 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={["fade"]} transitionDuration={200} theme={theme}>
         <Slide
-          transition={["zoom"]}
+          transition={["fade"]}
+          bgImage={images.firstSlide}
+          style={{ "background-size": "100% 100%" }}
+        />
+        <Slide
+          transition={["fade"]}
+          style={{ "background-size": "100% 100%" }}
+          bgImage={images.secondSlide}
+        />
+        <Slide
+          transition={["fade"]}
           bgColor="secondary"
           notes="  I used to work on this project that had a lot of legacy css or in this case less and you may think that being less made it better but oh no it didn't."
         >
@@ -277,7 +290,11 @@ body .button {
             A change in perspective
           </Heading>
         </Slide>
-        <Slide notes="Would you code this ? Your first idea may be to just start hacking away and make this page in one go and make it look awesome" transition={["fade"]} bgColor="secondary">
+        <Slide
+          notes="Would you code this ? Your first idea may be to just start hacking away and make this page in one go and make it look awesome"
+          transition={["fade"]}
+          bgColor="secondary"
+        >
           <div style={{ overflow: "scroll", height: "100vh" }}>
             <Image
               src="https://cdn.dribbble.com/users/1018923/screenshots/3545743/attachments/787979/landingpage_highfid.png"
@@ -285,10 +302,18 @@ body .button {
             />
           </div>
         </Slide>
-        <Slide notes="Just start hacking aways in your webopacks and jsxs and all the cool kid stuff.this will create inconsenticies and will also force you to make a lot of custom css and.." transition={["fade"]} bgColor="secondary">
+        <Slide
+          notes="Just start hacking aways in your webopacks and jsxs and all the cool kid stuff.this will create inconsenticies and will also force you to make a lot of custom css and.."
+          transition={["fade"]}
+          bgColor="secondary"
+        >
           <Image src="https://media0.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif" />
         </Slide>
-        <Slide notes="custom css causes specific bugs and a general lack of inconsistency in the code you build. Who has ever worked with opera mini ? You know my pain then" transition={["fade"]} bgColor="secondary">
+        <Slide
+          notes="custom css causes specific bugs and a general lack of inconsistency in the code you build. Who has ever worked with opera mini ? You know my pain then"
+          transition={["fade"]}
+          bgColor="secondary"
+        >
           <Heading size={1} textColor="primary" caps>
             Custom CSS is the death of a developer
           </Heading>
@@ -298,10 +323,14 @@ body .button {
             </Heading>
           </Appear>
         </Slide>
-        <Slide notes="As you can see I basically divided this page into little chunks that are composable into an awesome UI.
+        <Slide
+          notes="As you can see I basically divided this page into little chunks that are composable into an awesome UI.
 The idea of having a styleguide or a UI Toolkit is to define everything in one place so that you have to write the least amount of CSS and avoid stuff like I said at the top
 
-As you can see I am not here to teach you a craft or a skill, I'm here to trying and get a shift in thinking and basically start thinking a little like designers do and create a living styleguide. We should all have our very own bootstrap, that's my idea" transition={["fade"]} bgColor="secondary">
+As you can see I am not here to teach you a craft or a skill, I'm here to trying and get a shift in thinking and basically start thinking a little like designers do and create a living styleguide. We should all have our very own bootstrap, that's my idea"
+          transition={["fade"]}
+          bgColor="secondary"
+        >
           <div style={{ overflow: "scroll", height: "100vh" }}>
             <Image src={images.styleguide} width="100%" />
           </div>
@@ -627,6 +656,63 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
             <Appear>
               <ListItem textColor="primary">
                 Component Definition in Plain JSX
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">
+          <Heading size={2} textColor="primary" caps>
+            How to integrate in a project and in a team?
+          </Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">
+          <Heading size={2} textColor="primary" caps>
+            Developers
+          </Heading>
+          <List>
+            <Appear>
+              <ListItem textColor="primary">
+                Use within your own repo in a separate folder
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary">
+                Create an NPM package with versioning and keep updating that
+                package
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary">
+                User lerna and create a Monorepo
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">
+          <Heading size={2} textColor="primary" caps>
+            Designers
+          </Heading>
+          <List>
+            <Appear>
+              <ListItem textColor="primary">
+                Well, have all design folders in dropbox
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary">
+                Use Sketch with{" "}
+                <Link textColor="primary" href="https://kactus.io/">
+                  Cactus
+                </Link>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary">
+                Use {" "}
+                <Link textColor="primary" href="https://www.figma.com">
+                  Figma
+                </Link>
+                <Image src={images.figma} style={{ width: 700, display: "block" }}/>
               </ListItem>
             </Appear>
           </List>
