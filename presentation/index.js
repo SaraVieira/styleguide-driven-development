@@ -50,12 +50,10 @@ preloader(images);
 
 const theme = createTheme(
   {
-    primary: "#FCFEFF",
-    secondary: "#383F51",
-    tertiary: "#3C4F76",
-    quartenary: "#D1BEB0",
-    fifth: "#AB9F9D",
-    yld: "#1F024F"
+    primary: "white",
+    secondary: "#100830",
+    tertiary: "#73E9AC",
+    quartenary: "#9E79F3"
   },
   {
     primary: "Montserrat",
@@ -63,20 +61,11 @@ const theme = createTheme(
   }
 );
 
+
 export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["fade"]} transitionDuration={200} theme={theme}>
-        <Slide
-          transition={["fade"]}
-          bgImage={images.firstSlide}
-          style={{ "background-size": "100% 100%" }}
-        />
-        <Slide
-          transition={["fade"]}
-          style={{ "background-size": "100% 100%" }}
-          bgImage={images.secondSlide}
-        />
         <Slide
           transition={["fade"]}
           bgColor="secondary"
@@ -192,7 +181,7 @@ body .button {
         <Slide
           notes="So, my name is Sara and I am FE developer for YLD, a react and node consultancy that works out of london and lisbon.I'm always on twitter and you should follow me there if you like this sort of weird humor and rants."
           transition={["fade"]}
-          bgColor="yld"
+          bgColor="secondary"
         >
           <Layout style={{ minWidth: 500 }}>
             <Fit>
@@ -318,7 +307,7 @@ body .button {
             Custom CSS is the death of a developer
           </Heading>
           <Appear>
-            <Heading size={6} textColor="quartenary" caps>
+            <Heading size={6} textColor="tertiary" caps>
               So is opera mini but that's for another day
             </Heading>
           </Appear>
