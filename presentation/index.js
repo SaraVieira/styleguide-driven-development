@@ -30,7 +30,7 @@ require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 const images = {
-  kitten: require("../assets/kitten.jpg"),
+  kitten: require("../assets/kitten1.jpg"),
   caralho: require("../assets/caralho.png"),
   me: require("../assets/me.jpg"),
   styleguide: require("../assets/styleguide.png"),
@@ -61,7 +61,6 @@ const theme = createTheme(
   }
 );
 
-
 export default class Presentation extends React.Component {
   render() {
     return (
@@ -86,14 +85,15 @@ export default class Presentation extends React.Component {
           bgColor="secondary"
         >
           <CodePane
-            language="css"
+            lang="css"
+            theme="dark"
             source={`
 ul li span a { background: green; }
               `}
           />
           <Appear>
             <CodePane
-              language="css"
+              lang="css"
               source={`
 ul {
   li {
@@ -137,7 +137,7 @@ ul {
             How do you override this ?
           </Heading>
           <CodePane
-            language="css"
+            lang="css"
             source={`
 .button {
  .generic-class-that-should-not-have-anything-specific {
@@ -152,16 +152,14 @@ ul {
           transition={["fade"]}
           bgImage={images.kitten}
           align="center flex-end"
-        >
-          <Text>Photo by Q'AILA on Unsplash</Text>
-        </Slide>
+        />
         <Slide
           notes="Basically, you have to go back to the beginning and override it with classes or tags and add !important and do a 360 round on the specificity wheel."
           transition={["fade"]}
           bgColor="secondary"
         >
           <CodePane
-            language="css"
+            lang="css"
             source={`
 body .button {
  .generic-class-that-should-not-have-anything-specific {
@@ -194,7 +192,7 @@ body .button {
                 }}
               >
                 <ListItem textColor="primary">Sara Vieira</ListItem>
-                <ListItem textColor="primary">Full Stack Developer</ListItem>
+                <ListItem textColor="primary">Developer Advocate</ListItem>
                 <ListItem textColor="primary">@NikkitaFTW</ListItem>
                 <ListItem
                   textColor="primary"
@@ -228,30 +226,12 @@ body .button {
                     Horror Movies
                   </Text>
                 </ListItem>
-                <ListItem textColor="primary" style={{ display: "flex" }}>
-                  <Image src="https://i.imgur.com/7zkiG.gif" />
-                </ListItem>
               </List>
             </Fit>
             <Fit>
               <Image src={images.yld} />
             </Fit>
           </Layout>
-        </Slide>
-        <Slide
-          notes="I'm from portugal , you may remeber us as the guys that won the euro and don't really know how:"
-          transition={["fade"]}
-          bgColor="secondary"
-        >
-          <Heading size={1} textColor="primary" caps>
-            Portugal
-          </Heading>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
-          <Image
-            src="http://starecat.com/content/wp-content/uploads/do-you-ever-look-at-stuff-and-wonder-how-it-got-there-portugal-national-team-euro-2016.jpg"
-            height="80vh"
-          />
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary">
           <Heading size={1} textColor="primary" caps>
@@ -417,7 +397,7 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary">
           <CodePane
-            language="bash"
+            lang="bash"
             source={`
 ├── app
 │   ├── src
@@ -437,8 +417,9 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
           />
         </Slide>
         <CodeSlide
+          bgColor="secondary"
           transition={["fade"]}
-          lang="jsx"
+          lang="javascript"
           code={require("raw-loader!../assets/styleguide-config.example")}
           ranges={[
             { loc: [0, 270], title: "styleguide.config.js" },
@@ -452,6 +433,7 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
         />
         <CodeSlide
           transition={["fade"]}
+          bgColor="secondary"
           lang="jsx"
           code={require("raw-loader!../assets/code.example")}
           ranges={[
@@ -465,6 +447,7 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
           ]}
         />
         <CodeSlide
+          bgColor="secondary"
           transition={["fade"]}
           lang="markdown"
           code={require("raw-loader!../assets/markdown.example")}
@@ -490,7 +473,7 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
             </ListItem>
             <Appear>
               <ListItem textColor="primary">
-                Design is completely customizable, you can change the {" "}
+                Design is completely customizable, you can change the{" "}
                 <Link
                   textColor="primary"
                   href="https://react-styleguidist.js.org/docs/cookbook.html#how-to-change-styles-of-a-style-guide"
@@ -555,7 +538,7 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary">
           <CodePane
-            language="bash"
+            lang="bash"
             source={`
 ├── app
 │   ├── .storybook
@@ -577,6 +560,7 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
           />
         </Slide>
         <CodeSlide
+          bgColor="secondary"
           transition={["fade"]}
           lang="jsx"
           code={require("raw-loader!../assets/code.example")}
@@ -593,6 +577,7 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
         <CodeSlide
           transition={["fade"]}
           lang="jsx"
+          bgColor="secondary"
           code={require("raw-loader!../assets/story.example")}
           ranges={[
             { loc: [0, 270], title: "stories/button.js" },
@@ -606,6 +591,7 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
         <CodeSlide
           transition={["fade"]}
           lang="jsx"
+          bgColor="secondary"
           code={require("raw-loader!../assets/config.example")}
           ranges={[
             { loc: [0, 270], title: ".storybook/config.js" },
@@ -629,7 +615,7 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
             </ListItem>
             <Appear>
               <ListItem textColor="primary">
-                A lot of {" "}
+                A lot of{" "}
                 <Link
                   textColor="primary"
                   href="https://storybook.js.org/addons/addon-gallery/"
@@ -697,11 +683,14 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
             </Appear>
             <Appear>
               <ListItem textColor="primary">
-                Use {" "}
+                Use{" "}
                 <Link textColor="primary" href="https://www.figma.com">
                   Figma
                 </Link>
-                <Image src={images.figma} style={{ width: 700, display: "block" }}/>
+                <Image
+                  src={images.figma}
+                  style={{ width: 700, display: "block" }}
+                />
               </ListItem>
             </Appear>
           </List>
