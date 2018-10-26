@@ -39,7 +39,8 @@ const images = {
   zombie: require("../assets/zombie.svg"),
   storybook: require("../assets/storybook.png"),
   storybookStart: require("../assets/storybook-start.png"),
-  figma: require("../assets/figma.png")
+  figma: require("../assets/figma.png"),
+  frameworks: require("../assets/frameworks.png")
 };
 
 preloader(images);
@@ -445,9 +446,14 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
           </Heading>
           <Appear>
             <Heading size={4} caps lineHeight={1} textColor="primary">
-              Support for 11 Frameworks and also plain HTML
+              Support for 10 Frameworks and also plain HTML
             </Heading>
           </Appear>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Layout align="center center">
+            <Image src={images.frameworks} style={{ maxHeight: "80vh" }} />
+          </Layout>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary">
           <Heading size={1} textColor="primary" caps>
