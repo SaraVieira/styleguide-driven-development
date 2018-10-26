@@ -39,8 +39,6 @@ const images = {
   zombie: require("../assets/zombie.svg"),
   storybook: require("../assets/storybook.png"),
   storybookStart: require("../assets/storybook-start.png"),
-  firstSlide: require("../assets/first-slide.jpeg"),
-  secondSlide: require("../assets/second-slide.jpeg"),
   figma: require("../assets/figma.png")
 };
 
@@ -347,8 +345,10 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
             output={[
               <div style={{ color: "#33B969" }}>> create-react-app my-app</div>,
               <div>> cd my-app</div>,
-              <div style={{ color: "#33B969" }}>> npm i -g @storybook/cli</div>,
-              <div>> getstorybook</div>,
+              <div style={{ color: "#33B969" }}>
+                > npm i -g @storybook/cli@rc
+              </div>,
+              <div>> sb init</div>,
               <div style={{ color: "#33B969" }}>> yarn storybook</div>
             ]}
           />
