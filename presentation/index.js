@@ -37,8 +37,6 @@ const images = {
   yld: require("../assets/image.gif"),
   soccer: require("../assets/soccer.svg"),
   zombie: require("../assets/zombie.svg"),
-  styleguidist: require("../assets/styleguidist.png"),
-  styleguidistStart: require("../assets/styleguidist-start.png"),
   storybook: require("../assets/storybook.png"),
   storybookStart: require("../assets/storybook-start.png"),
   firstSlide: require("../assets/first-slide.jpeg"),
@@ -334,193 +332,24 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={2} textColor="secondary" caps>
-            Tools
+            Storybook
           </Heading>
           <Layout align="center center">
-            <Fit style={{ marginTop: 40, marginRight: 40 }}>
-              <Image
-                width="350"
-                src="https://raw.githubusercontent.com/styleguidist/brand/master/rs-logo-with-type.png"
-              />
-            </Fit>
-            <Fit
-              style={{
-                alignItems: "center",
-                display: "flex"
-              }}
-            >
-              <Image
-                src=" data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjA0MCIgaGVpZ2h0PSI1NzYiIHZpZXdCb3g9IjAgMCAyMDQwIDU3NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlPnN0b3J5Ym9vay1sb2dvLWZpbmFsPC90aXRsZT48ZGVzYz5DcmVhdGVkIHVzaW5nIEZpZ21hPC9kZXNjPjxnIHRyYW5zZm9ybT0ibWF0cml4KDIgMCAwIDIgLTQzMjIgLTUwNikiPjxjbGlwUGF0aCBpZD0iYSIgY2xpcC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMjE2MSAyNTNoMTAyMHYyODhIMjE2MVYyNTN6IiBmaWxsPSIjRkZGIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjx1c2UgeGxpbms6aHJlZj0iI2IiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxNjYgMjc1KSIgZmlsbD0iI0I1N0VFNSIvPjx1c2UgeGxpbms6aHJlZj0iI2MiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxODAgMjYxKSIgZmlsbD0iI0YxNjE4QyIvPjx1c2UgeGxpbms6aHJlZj0iI2QiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIzMjYgMjYxLjUpIiBmaWxsPSIjRkZGIi8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjM5MyAzMDApIj48dXNlIHhsaW5rOmhyZWY9IiNlIiBmaWxsPSIjNkRBQkY1Ii8+PHVzZSB4bGluazpocmVmPSIjZiIgZmlsbD0iI0YzQUQzOCIvPjx1c2UgeGxpbms6aHJlZj0iI2ciIGZpbGw9IiNCNTdFRTYiLz48dXNlIHhsaW5rOmhyZWY9IiNoIiBmaWxsPSIjRjE2MTYxIi8+PHVzZSB4bGluazpocmVmPSIjaSIgZmlsbD0iI0I1N0VFNSIvPjx1c2UgeGxpbms6aHJlZj0iI2oiIGZpbGw9IiNBMkUwNUUiLz48L2c+PHVzZSB4bGluazpocmVmPSIjayIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjIyMCAzMDEpIiBmaWxsPSIjRkZGIi8+PC9nPjwvZz48ZGVmcz48cGF0aCBpZD0iYiIgZD0iTTIxIDI0Nkw5IDBIMGw5IDI0NmgxMnoiLz48cGF0aCBpZD0iYyIgZD0iTTEyIDI2MEwwIDE0IDE5NiAwdjI2OWwtMTg0LTl6Ii8+PHBhdGggaWQ9ImQiIGQ9Ik0wIDM1LjVMMi41IDIgMjYgMHYzNS41TDE0LjE4MiAyNC44MSAwIDM1LjV6Ii8+PHBhdGggaWQ9ImUiIGQ9Ik0zNDcuMDQxIDU3LjJoLTMyLjc4djE4LjI2YzAgMjMuNTQtLjIyIDQyLjQ2LS4yMiA0Mi40NiAwIDExLjY2LTQuODQgMTQuNzQtMTEgMTQuNzQtNi4zOCAwLTkuNjgtMi44Ni05LjY4LTE1LjE4IDAtMTguMDQgMS4zMi01My42OCAxLjMyLTUzLjY4bC0zMi43OC0uODhjMC0uNDQtMS4xIDI3LjI4LTEuMSA2MC4wNnMyMC42OCAzNS4yIDMwLjE0IDM1LjJjOS4wMiAwIDE4LjkyLTMuNTIgMjQuMi05LjI0IDAgMTguNy01Ljk0IDI0Ljg2LTE5LjE0IDI0Ljg2LTguMzYgMC0xOC40OC00LjE4LTIzLjk4LTguOHYzMC4xNGM5LjI0IDUuNSAxOS41OCA3LjkyIDI5LjkyIDcuOTIgMjIgMCA0My41Ni0xMi43NiA0NC00OS41LjY2LTQwLjkyLjg4LTgxLjg0IDEuMS05Ni4zNnptMTY1LjU1LS4yMmMtMzMuNDQgMC00Ny43NCAyNi44NC00Ny43NCA1OC43NCAwIDI3LjA2IDEzLjIgNDcuMyA0NC42NiA0Ny4zIDM1LjIgMCA0Ny43NC0yNi40IDQ3Ljc0LTU2Ljk4IDAtMjguMzgtMTIuMzItNDkuMDYtNDQuNjYtNDkuMDZ6bTExLjY2IDUzLjI0YzAgMTQuMy00Ljg0IDI1LjMtMTQuNzQgMjUuMy04LjM2IDAtMTEuNjYtOS42OC0xMS42Ni0xOS44IDAtMTYuMjggNS43Mi0yOC44MiAxNC43NC0yOC44MiA5LjI0IDAgMTEuNjYgMTIuMSAxMS42NiAyMy4zMnoiLz48cGF0aCBpZD0iZiIgZD0iTTIwLjY4IDE2My4yNGMxNi45NC4yMiAzMy4yMi0xLjk4IDMzLjIyLTEuOTggMC0yOC44MiAwLTU1Ljg4LjIyLTc2LjM0IDguOC0uODggMTYuMDYtMS45OCAxNi4wNi0xLjk4LjQ0LTEzLjg2LS42Ni0yNi40LS42Ni0yNi40bC0xNC45Ni44OGMuNDQtMjAuOS44OC0zMS42OC44OC0zMS42OGwtMzUuMiAyLjJzMCAxMi45OC4yMiAzMi43OGMtMTAuNzggMS4zMi0xOC43IDMuNTItMTguNyAzLjUyLjQ0IDExLjY2IDQuNjIgMjQuMiA0LjYyIDI0LjJsMTQuMy0uNjZ2NzUuNDZ6Ii8+PHBhdGggaWQ9ImciIGQ9Ik0yMTkuMjc2IDcwLjYyYzAtMy4zLjIyLTYuODIuNDQtMTAuMzRsLTMwLjU4LTEuMXMtMi44NiA0NC44OC0yLjY0IDEwMy44NGMxNC43NCAxLjEgMzEuOSAxLjEgMzEuOSAxLjEtLjIyIDAgMC0xOS41OC44OC00OS4wNi40NC0xNy4xNiA2LjYtMjIuNDQgMTUuODQtMjIuNDQgNS41IDAgMTIuMzIgMi40MiAxMi4zMiAyLjQybDMuNTItMzAuNThjLTE0LjMtNC44NC0yNy41LS42Ni0zMS42OCA2LjE2eiIvPjxwYXRoIGlkPSJoIiBkPSJNMzk2LjAyNiAxNjIuNThjMC00Ljg0LjQ0LTkuMjQuNDQtMTEgMy43NCA1LjUgMTEgMTAuMzQgMjAuMDIgMTAuMzQgMjUuMyAwIDM2LjMtMjQuODYgMzYuOTYtNTQuMzQuNDQtMjcuOTQtMTAuMTItNTEuMjYtMzMuNDQtNTEuMjYtOC41OCAwLTE1Ljg0IDQuNjItMTkuOCA5LjQ2IDEuOTgtMzIuNzggMy41Mi01My42OCAzLjUyLTUzLjY4bC0zMy4yMi0yLjQyYy0xLjk4IDIyLjg4LTUuMDYgOTguNTYtNC42MiAxNTMuNzggMTkuMTQuNDQgMzAuMTQtLjg4IDMwLjE0LS44OHptMS45OC00My43OGMtLjQ0LTUuOTQtMS41NC0zMi4zNCAxMS4yMi0zMi4zNCA5LjAyIDAgMTEuMjIgMTEgMTAuNzggMjItLjIyIDExLjg4LTIuNjQgMjUuMy0xMS44OCAyNS4zLTYuMzggMC05LjQ2LTQuNjItMTAuMTItMTQuOTZ6Ii8+PHBhdGggaWQ9ImkiIGQ9Ik03NzYuNDA5IDY0LjI0bC0zNC41NC00LjYycy0xMS44OCAxNy44Mi0yOC42IDM4LjI4YzIuNjQtNDYuODYgNS45NC03OC4zMiA1Ljk0LTc4LjMybC0zNS44Ni0zLjNzLTMuOTYgODEuNC00Ljg0IDE0Ni4wOGMxNC45NiAxLjc2IDMyLjM0IDEuNzYgMzIuMzQgMS43NmwxLjEtMzguNzJjMTYuMjggMTguNDggMzQuNTQgMzcuNjIgMzQuNTQgMzcuNjJsMzguMDYtNi4xNmMtMjItMjItMzYuOTYtMzcuNC00NC4yMi00Ny4wOCA4LjM2LTExLjIyIDIzLjMyLTI5LjA0IDM2LjA4LTQ1LjU0eiIvPjxwYXRoIGlkPSJqIiBkPSJNMTI2LjA4OCA1Ni45OGMtMzMuNDQgMC00Ny43NCAyNi44NC00Ny43NCA1OC43NCAwIDI3LjA2IDEzLjIgNDcuMyA0NC42NiA0Ny4zIDM1LjIgMCA0Ny43NC0yNi40IDQ3Ljc0LTU2Ljk4IDAtMjguMzgtMTIuMzIxLTQ5LjA2LTQ0LjY2LTQ5LjA2em0xMS42NiA1My4yNGMwIDE0LjMtNC44NDEgMjUuMy0xNC43NCAyNS4zLTguMzYgMC0xMS42Ni05LjY4LTExLjY2LTE5LjggMC0xNi4yOCA1LjcxOS0yOC44MiAxNC43NC0yOC44MiA5LjI0IDAgMTEuNjYgMTIuMSAxMS42NiAyMy4zMnpNNjE3LjIyIDU2Ljk4Yy0zMy40NCAwLTQ3Ljc0IDI2Ljg0LTQ3Ljc0IDU4Ljc0IDAgMjcuMDYgMTMuMiA0Ny4zIDQ0LjY2IDQ3LjMgMzUuMiAwIDQ3Ljc0LTI2LjQgNDcuNzQtNTYuOTggMC0yOC4zOC0xMi4zMi00OS4wNi00NC42Ni00OS4wNnptMTEuNjYgNTMuMjRjMCAxNC4zLTQuODQgMjUuMy0xNC43NCAyNS4zLTguMzYgMC0xMS42Ni05LjY4LTExLjY2LTE5LjggMC0xNi4yOCA1LjcyLTI4LjgyIDE0Ljc0LTI4LjgyIDkuMjQgMCAxMS42NiAxMi4xIDExLjY2IDIzLjMyeiIvPjxwYXRoIGlkPSJrIiBkPSJNNzQuNjQgNjUuMjhsMzguNjQtLjk2QzExNC4yNCAyNi44OCA5NC44IDguNCA2MC45NiA4LjRzLTUyLjggMTkuMi01Mi44IDQ4YzAgNTAuMTYgNjQuOCA1MS4xMiA2NC44IDc4LjQ4IDAgNy42OC0zLjYgMTIuMjQtMTEuNTIgMTIuMjQtMTAuMzIgMC0xNC40LTYuNzItMTMuOTItMjUuNDRINi45NmMtMy4xMiA0Ni4zMiAyNCA1Ni44OCA1NC45NiA1Ni44OCAzMCAwIDUzLjUyLTEzLjkyIDUzLjUyLTQ0LjE2IDAtNTMuNzYtNjUuNzYtNTIuMzItNjUuNzYtNzguOTYgMC0xMC44IDcuNjgtMTIuMjQgMTIuMjQtMTIuMjQgNC44IDAgMTMuNDQgMS45MiAxMi43MiAyMi4wOHoiLz48L2RlZnM+PC9zdmc+"
-                style={{
-                  fontWeight: 800,
-                  width: 500
-                }}
-              />
-            </Fit>
+            <Image src="https://github.com/storybooks/storybook/raw/master/media/storybook-intro.gif" />
           </Layout>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary">
-          <Heading size={3} textColor="primary" caps>
-            React Styleguidist
-          </Heading>
-          <Image src={images.styleguidist} width="747" />
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
           <Heading size={5} textColor="primary" caps>
-            React Styleguidist Boilerplate
+            Quick Start
           </Heading>
           <Terminal
             title="1. sara@flying-unicorn-away: ~(zsh)"
             output={[
-              <div style={{ color: "#33B969" }}>
-                > git clone
-                git@github.com:SaraVieira/react-styleguidist-boilerplate.git
-              </div>,
-              <div>> cd react-styleguidist-boilerplate</div>,
-              <div style={{ color: "#33B969" }}>> rm -rf .git</div>,
-              <div>> yarn</div>,
-              <div style={{ color: "#33B969" }}>> yarn start</div>
-            ]}
-          />
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
-          <div style={{ overflow: "scroll", height: "100vh" }}>
-            <Link
-              textColor="primary"
-              href="https://react-styleguidist-boilerplate.now.sh/"
-              target="_blank"
-            >
-              Boilerplate
-            </Link>
-            <Image src={images.styleguidistStart} width="100%" />
-          </div>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
-          <CodePane
-            lang="bash"
-            source={`
-├── app
-│   ├── src
-│   │──── components
-│   │   └───── Button
-│   │     └────── index.js
-│   │     └────── Button.js
-│   │     └────── Button.css
-│   │     └────── Readme.md
-├── styleguide (build)
-├── package.json
-├── styleguide.config.js
-├── .babelrc
-├── .eslintrc
-└── .gitignore
-        `}
-          />
-        </Slide>
-        <CodeSlide
-          bgColor="secondary"
-          transition={["fade"]}
-          lang="javascript"
-          code={require("raw-loader!../assets/styleguide-config.example")}
-          ranges={[
-            { loc: [0, 270], title: "styleguide.config.js" },
-            { loc: [1, 2], title: "Locate Your Components" },
-            { loc: [2, 3], title: "Use default Example" },
-            { loc: [3, 4], title: "Give it a title" },
-            { loc: [4, 7], title: "Update Webpack config" },
-            { loc: [7, 12], title: "Load JS/JSX" },
-            { loc: [12, 16], title: "Load CSS" }
-          ]}
-        />
-        <CodeSlide
-          transition={["fade"]}
-          bgColor="secondary"
-          lang="jsx"
-          code={require("raw-loader!../assets/code.example")}
-          ranges={[
-            { loc: [0, 270], title: "Button.js" },
-            { loc: [0, 5], title: "Import all the things" },
-            { loc: [8, 13], title: "Define your component" },
-            { loc: [13, 23], title: "Define your component" },
-            { loc: [24, 31], title: "Define your propTypes" },
-            { loc: [31, 37], title: "Define your propTypes" },
-            { loc: [37, 44], title: "Define your defaultProps" }
-          ]}
-        />
-        <CodeSlide
-          bgColor="secondary"
-          transition={["fade"]}
-          lang="markdown"
-          code={require("raw-loader!../assets/markdown.example")}
-          ranges={[
-            { loc: [0, 270], title: "Readme.md" },
-            { loc: [2, 5], title: "Render default Button" },
-            { loc: [8, 11], title: "Render with props" },
-            { loc: [13, 17], title: "Disable Editor" },
-            { loc: [19, 23], title: "Render Static" }
-          ]}
-        />
-        <Slide transition={["fade"]} bgColor="secondary">
-          <List>
-            <ListItem textColor="primary">
-              Can be used with{" "}
-              <Link
-                href="https://react-styleguidist.js.org/docs/cookbook.html#how-to-use-react-styleguidist-with-preact"
-                textColor="primary"
-                target="_blank"
-              >
-                Preact 🙌
-              </Link>
-            </ListItem>
-            <Appear>
-              <ListItem textColor="primary">
-                Design is completely customizable, you can change the{" "}
-                <Link
-                  textColor="primary"
-                  href="https://react-styleguidist.js.org/docs/cookbook.html#how-to-change-styles-of-a-style-guide"
-                  target="_blank"
-                >
-                  styles
-                </Link>{" "}
-                and even the actual{" "}
-                <Link
-                  textColor="primary"
-                  href="https://react-styleguidist.js.org/docs/cookbook.html#how-to-change-the-layout-of-a-style-guide"
-                  target="_blank"
-                >
-                  layout.
-                </Link>
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textColor="primary">Live editor</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textColor="primary">
-                Component Definition in Markdown
-              </ListItem>
-            </Appear>
-          </List>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
-          <Heading size={3} textColor="primary" caps>
-            Storybook
-          </Heading>
-          <Image src={images.storybook} width="747" />
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
-          <Heading size={5} textColor="primary" caps>
-            Storybook Boilerplate
-          </Heading>
-          <Terminal
-            title="1. sara@flying-unicorn-away: ~(zsh)"
-            output={[
-              <div style={{ color: "#33B969" }}>
-                > git clone git@github.com:SaraVieira/storybook-boilerplate.git
-              </div>,
-              <div>> cd storybook-boilerplate</div>,
-              <div style={{ color: "#33B969" }}>> rm -rf .git</div>,
-              <div>> yarn</div>,
-              <div style={{ color: "#33B969" }}>> yarn start</div>
+              <div style={{ color: "#33B969" }}>> create-react-app my-app</div>,
+              <div>> cd my-app</div>,
+              <div style={{ color: "#33B969" }}>> npm i -g @storybook/cli</div>,
+              <div>> getstorybook</div>,
+              <div style={{ color: "#33B969" }}>> yarn storybook</div>
             ]}
           />
         </Slide>
@@ -530,7 +359,7 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
             href="https://storybook-boilerplate.now.sh/"
             target="_blank"
           >
-            Boilerplate
+            Starter
           </Link>
           <div style={{ overflow: "scroll", height: "100vh" }}>
             <Image src={images.storybookStart} width="100%" />
@@ -553,9 +382,6 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
 │   └─────  button.js
 ├── .out (build)
 ├── package.json
-├── .babelrc
-├── .eslintrc
-└── .gitignore
         `}
           />
         </Slide>
@@ -567,11 +393,9 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
           ranges={[
             { loc: [0, 270], title: "Button.js" },
             { loc: [0, 5], title: "Import all the things" },
-            { loc: [8, 13], title: "Define your component" },
-            { loc: [13, 23], title: "Define your component" },
-            { loc: [24, 31], title: "Define your propTypes" },
-            { loc: [31, 37], title: "Define your propTypes" },
-            { loc: [37, 44], title: "Define your defaultProps" }
+            { loc: [6, 13], title: "Define your component" },
+            { loc: [18, 24], title: "Define your propTypes" },
+            { loc: [25, 35], title: "Define your defaultProps" }
           ]}
         />
         <CodeSlide
@@ -580,7 +404,7 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
           bgColor="secondary"
           code={require("raw-loader!../assets/story.example")}
           ranges={[
-            { loc: [0, 270], title: "stories/button.js" },
+            { loc: [0, 270], title: "stories/index.js" },
             { loc: [0, 4], title: "Import all the things" },
             { loc: [5, 6], title: "Define name of the story" },
             { loc: [7, 9], title: "Add variants of your component" },
@@ -601,39 +425,44 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
           ]}
         />
         <Slide transition={["fade"]} bgColor="secondary">
-          <List>
-            <ListItem textColor="primary">
-              Can be used with{" "}
-              <Link
-                textColor="primary"
-                href="https://storybook.js.org/basics/guide-vue/"
-                target="_blank"
-              >
-                Vue
-              </Link>{" "}
-              🙌
-            </ListItem>
-            <Appear>
-              <ListItem textColor="primary">
-                A lot of{" "}
-                <Link
-                  textColor="primary"
-                  href="https://storybook.js.org/addons/addon-gallery/"
-                  target="_blank"
-                >
-                  Addons
-                </Link>
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textColor="primary">Integrated Console</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textColor="primary">
-                Component Definition in Plain JSX
-              </ListItem>
-            </Appear>
-          </List>
+          <Heading size={2} textColor="primary" caps>
+            What makes this tool amazing ? 😍
+          </Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">
+          <Heading size={1} textColor="primary" caps>
+            An amazing Community
+          </Heading>
+          <Appear>
+            <Heading size={4} caps lineHeight={1} textColor="primary">
+              Over 168 PRs merged last month for example by over 50 people
+            </Heading>
+          </Appear>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">
+          <Heading size={1} textColor="primary" caps>
+            No Hate
+          </Heading>
+          <Appear>
+            <Heading size={4} caps lineHeight={1} textColor="primary">
+              Support for 11 Frameworks and also plain HTML
+            </Heading>
+          </Appear>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">
+          <Heading size={1} textColor="primary" caps>
+            Addons
+          </Heading>
+          <Appear>
+            <Heading size={4} caps lineHeight={1} textColor="primary">
+              Official and Community addons for everything
+            </Heading>
+          </Appear>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">
+          <Heading size={1} textColor="primary" caps>
+            Component Isolation
+          </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary">
           <Heading size={2} textColor="primary" caps>
@@ -695,6 +524,17 @@ As you can see I am not here to teach you a craft or a skill, I'm here to trying
             </Appear>
           </List>
         </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">
+          <Heading size={2} textColor="primary" caps>
+            FRAMER X
+          </Heading>
+          <video
+            autoPlay
+            style={{ maxWidth: "100%" }}
+            src="https://static.framer.com/x/frontpage/hero.mp4"
+          />
+        </Slide>
+
         <Slide transition={["fade"]} bgColor="secondary">
           <Heading size={2} textColor="primary" caps>
             Why ?
